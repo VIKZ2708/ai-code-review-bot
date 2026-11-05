@@ -1,0 +1,10 @@
+{
+  "filename": "app/cart.py",
+  "patch": "@@ -1,1 +1,5 @@\n import logging\n+\n+def add_item(item, items=[]):\n+    items.append(item)\n+    return items",
+  "expect": [
+    {
+      "line": 3,
+      "category": "bug"
+    }
+  ]
+}

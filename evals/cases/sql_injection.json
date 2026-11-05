@@ -1,0 +1,10 @@
+{
+  "filename": "app/users.py",
+  "patch": "@@ -10,3 +10,6 @@ def get_user(db, user_id):\n     conn = db.connect()\n-    return None\n+    cur = conn.cursor()\n+    cur.execute(f\"SELECT * FROM users WHERE id = {user_id}\")\n+    return cur.fetchone()\n+\n     # end",
+  "expect": [
+    {
+      "line": 12,
+      "category": "security"
+    }
+  ]
+}

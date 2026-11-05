@@ -1,0 +1,10 @@
+{
+  "filename": "app/stats.py",
+  "patch": "@@ -1,1 +1,4 @@\n # stats\n+def average(values):\n+    total = sum(values)\n+    return total / len(values)",
+  "expect": [
+    {
+      "line": 4,
+      "category": "bug"
+    }
+  ]
+}

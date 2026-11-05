@@ -1,0 +1,5 @@
+{
+  "filename": "app/math_utils.py",
+  "patch": "@@ -1,1 +1,6 @@\n # math helpers\n+def clamp(value: float, low: float, high: float) -> float:\n+    \"\"\"Limit value to the range [low, high].\"\"\"\n+    if low > high:\n+        raise ValueError(\"low must be <= high\")\n+    return max(low, min(value, high))",
+  "expect": []
+}

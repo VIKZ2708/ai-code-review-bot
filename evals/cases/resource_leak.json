@@ -1,0 +1,10 @@
+{
+  "filename": "app/report.py",
+  "patch": "@@ -4,1 +4,5 @@\n # reports\n+def read_report(path):\n+    f = open(path)\n+    data = f.read()\n+    return data.upper()",
+  "expect": [
+    {
+      "line": 6,
+      "category": "bug"
+    }
+  ]
+}

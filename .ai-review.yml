@@ -1,0 +1,11 @@
+# AI Code Review settings (all optional)
+provider: gemini          # gemini | anthropic | openai
+# model: gemini-2.5-flash # override the default model
+min_severity: minor       # minor | major | critical
+max_files: 20
+max_comments_per_file: 5
+ignore:
+  - "docs/*"
+rules:
+  - Never log full request bodies; they can contain customer PII.
+  - Database queries must use parameters, never string formatting.

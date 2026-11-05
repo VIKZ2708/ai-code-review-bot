@@ -1,6 +1,6 @@
 # AI Code Review settings (all optional)
-provider: gemini          # gemini | anthropic | openai
-# model: gemini-2.5-flash # override the default model
+provider: anthropic       # gemini | anthropic | openai
+# model: claude-haiku-5-5  # cheap and fast; use claude-sonnet-5-5 for deeper reviews
 min_severity: minor       # minor | major | critical
 max_files: 20
 max_comments_per_file: 5

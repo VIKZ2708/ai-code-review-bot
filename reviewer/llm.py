@@ -52,7 +52,6 @@ def _anthropic(model: str, system: str, user: str) -> str:
     body = {
         "model": model,
         "max_tokens": 2000,
-        "temperature": 0.2,
         "system": system,
         "messages": [{"role": "user", "content": user}],
     }
